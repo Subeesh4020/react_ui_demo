@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.heading {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sidebarBtn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.sidebarBtn {
+    color: #ffffff;
+    border: none;
+    /* padding: 12px 24px; */
+    /* border-radius: 8px; */
+    font-weight: 300;
+    cursor: pointer;
+
+    background: linear-gradient(-45deg, #2563eb, #7c3aed, #db2777, #2563eb);
+    background-size: 300% 300%;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* Button.module.css */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

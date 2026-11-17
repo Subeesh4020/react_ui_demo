@@ -1,0 +1,184 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Blurred Full-Screen Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  z-index: 1100;
+  overflow-y: auto;
+
+  /* Dark tint + heavy background blur */
+  background-color: rgba(11, 17, 32, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Modal Card */
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  background-color: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 24px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Top-Right Close Button */
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-color: #334155;
+}
+
+/* Header with Status Icon */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-right: 32px; /* Prevents text from overlapping the close button */
+}
+
+.iconBadge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoIcon {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.successIcon {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.warningIcon {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.errorIcon {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.title {
+  margin: 0 0 6px 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.925rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+/* Action Footer */
+.footer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.secondaryButton {
+  padding: 9px 16px;
+  border-radius: 8px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.secondaryButton:hover {
+  background-color: #334155;
+}
+
+.primaryButton {
+  padding: 9px 18px;
+  border-radius: 8px;
+  background-color: #2563eb;
+  border: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primaryButton:hover {
+  background-color: #1d4ed8;
+}
+
+.dangerButton {
+  background-color: #dc2626;
+}
+
+.dangerButton:hover {
+  background-color: #b91c1c;
+}
