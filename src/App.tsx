@@ -15,6 +15,7 @@ import { Dashboard } from './components/Dashboard/Dashboard';
 import { MessageBox } from './components/MessageBox/MessageBox';
 import { Overlay } from './components/Overlay/Overlay';
 import { UserProfile } from './components/UserProfile/UserProfile';
+import { RegistrationForm } from './components/RegistrationForm/RegistrationForm';
 
 import styles from './App.module.css';
 
@@ -91,6 +92,7 @@ function App() {
                         onClose={() => navigate('/')}
                     />
                 } />
+                <Route path='/user-registration-form' element={<RegistrationForm /> } />
             </Routes>
             
         </div>

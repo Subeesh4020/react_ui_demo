@@ -54,6 +54,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
             navigate('/user-profile');
             onClose();
         },
+        'UserRegistrationForm': () => {
+            // setIsLoggedIn();
+            navigate('/user-registration-form');
+            onClose();
+        },
     };
 
     const sidebarItems = [
@@ -63,7 +68,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
         'Dashboard',
         'MessageBox',
         'Overlay',
-        'UserProfile'
+        'UserProfile',
+        'UserRegistrationForm'
     ];
    
     const handleSidebarItemClick = (actionName: string) => {
